@@ -1,0 +1,22 @@
+#include <stdio.h>
+#include <conio.h>
+#include <stdlib.h>
+#include <stdarg.h>
+#include <string.h>
+#include <ctype.h>
+#include <time.h>
+
+#ifndef ARBORE_BINAR
+#define ARBORE_BINAR
+#define Frunza(a)(((a)->st==NULL)&&((a)->dr==NULL));
+#define Interior(a) (((a)->st != NULL ) || ((a)->dr !=NULL))
+#define Ordin(a) (((a)->st != NULL ) + ((a)->dr != NULL))
+
+
+
+typedef char* TInfo;
+
+typedef struct nod 
+{ TInfo info;
+  struct nod*st, *dr;
+} TNod, *TArb, **AArb;

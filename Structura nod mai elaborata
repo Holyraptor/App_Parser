@@ -12,11 +12,11 @@
 #define Interior(a) (((a)->st != NULL ) || ((a)->dr !=NULL))
 #define Ordin(a) (((a)->st != NULL ) + ((a)->dr != NULL))
 
-
-
-typedef char* TInfo;
-
 typedef struct nod 
-{ TInfo info;
+{ 
   struct nod*st, *dr;
+  char* radacina;
+  double start, end;
+  char variable;
+  double rez; //Optional
 } TNod, *TArb, **AArb;
